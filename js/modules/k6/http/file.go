@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"go.k6.io/k6/js/common"
+	"github.com/uvite/jsvm/js/common"
 )
 
 // FileData represents a binary file requiring multipart request encoding

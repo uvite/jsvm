@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/afero"
 
-	"go.k6.io/k6/lib/fsext"
+	"github.com/uvite/jsvm/lib/fsext"
 )
 
 // CreateFilesystems creates the correct filesystem map for the current OS

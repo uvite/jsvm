@@ -5,9 +5,9 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"go.k6.io/k6/cmd/state"
-	"go.k6.io/k6/ext"
-	"go.k6.io/k6/lib/consts"
+	"github.com/uvite/jsvm/cmd/state"
+	"github.com/uvite/jsvm/ext"
+	"github.com/uvite/jsvm/lib/consts"
 )
 
 func getCmdVersion(gs *state.GlobalState) *cobra.Command {

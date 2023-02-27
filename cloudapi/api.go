@@ -8,7 +8,7 @@ import (
 	"strconv"
 
 	"github.com/sirupsen/logrus"
-	"go.k6.io/k6/lib"
+	"github.com/uvite/jsvm/lib"
 )
 
 type ResultStatus int

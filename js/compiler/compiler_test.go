@@ -11,8 +11,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/testutils"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/testutils"
 )
 
 func TestTransform(t *testing.T) {

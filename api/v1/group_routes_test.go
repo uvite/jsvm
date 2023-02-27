@@ -11,12 +11,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.k6.io/k6/execution"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/lib/testutils/minirunner"
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/metrics/engine"
+	"github.com/uvite/jsvm/execution"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/lib/testutils/minirunner"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/metrics/engine"
 )
 
 func getTestPreInitState(tb testing.TB) *lib.TestPreInitState {

@@ -3,7 +3,7 @@ package v1
 import (
 	"fmt"
 
-	"go.k6.io/k6/lib"
+	"github.com/uvite/jsvm/lib"
 )
 
 type Check struct {

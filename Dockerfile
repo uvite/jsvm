@@ -1,8 +1,8 @@
 FROM golang:1.20-alpine as builder
-WORKDIR $GOPATH/src/go.k6.io/k6
+WORKDIR $GOPATH/src/github.com/uvite/jsvm
 COPY . .
 RUN apk --no-cache add git=~2
-RUN CGO_ENABLED=0 go install -a -trimpath -ldflags "-s -w -X go.k6.io/k6/lib/consts.VersionDetails=$(date -u +"%FT%T%z")/$(git describe --tags --always --long --dirty)"
+RUN CGO_ENABLED=0 go install -a -trimpath -ldflags "-s -w -X github.com/uvite/jsvm/lib/consts.VersionDetails=$(date -u +"%FT%T%z")/$(git describe --tags --always --long --dirty)"
 
 FROM alpine:3.17
 RUN apk add --no-cache ca-certificates=~20220614 && \

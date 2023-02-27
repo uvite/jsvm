@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/lib/testutils/minirunner"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/lib/testutils/minirunner"
+	"github.com/uvite/jsvm/metrics"
 )
 
 func getBogusTestRunState(tb testing.TB) *lib.TestRunState {

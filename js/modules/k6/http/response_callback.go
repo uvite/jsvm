@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/dop251/goja"
-	"go.k6.io/k6/js/common"
+	"github.com/uvite/jsvm/js/common"
 )
 
 //nolint:gochecknoglobals

@@ -10,10 +10,10 @@ import (
 	"github.com/sirupsen/logrus"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/types"
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/ui/pb"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/types"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/ui/pb"
 )
 
 const perVUIterationsType = "per-vu-iterations"
@@ -130,6 +130,7 @@ type PerVUIterations struct {
 var _ lib.Executor = &PerVUIterations{}
 
 // Run executes a specific number of iterations with each configured VU.
+//
 //nolint:funlen
 func (pvi PerVUIterations) Run(parentCtx context.Context, out chan<- metrics.SampleContainer) (err error) {
 	numVUs := pvi.config.GetVUs(pvi.executionState.ExecutionTuple)

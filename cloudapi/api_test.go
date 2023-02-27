@@ -11,8 +11,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/lib/types"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/lib/types"
 )
 
 func fprintf(t *testing.T, w io.Writer, format string, a ...interface{}) int {

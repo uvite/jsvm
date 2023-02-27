@@ -7,7 +7,7 @@ import (
 	"gopkg.in/guregu/null.v3"
 
 	"github.com/mstoykov/envconfig"
-	"go.k6.io/k6/lib/types"
+	"github.com/uvite/jsvm/lib/types"
 )
 
 // Config holds all the necessary data and options for sending metrics to the Load Impact cloud.

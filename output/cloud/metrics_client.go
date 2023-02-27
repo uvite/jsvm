@@ -15,7 +15,7 @@ import (
 	easyjson "github.com/mailru/easyjson"
 	"github.com/sirupsen/logrus"
 
-	"go.k6.io/k6/cloudapi"
+	"github.com/uvite/jsvm/cloudapi"
 )
 
 // MetricsClient is a wrapper around the cloudapi.Client that is also capable of pushing

@@ -13,12 +13,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/js"
-	"go.k6.io/k6/js/modules"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/loader"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/js"
+	"github.com/uvite/jsvm/js/modules"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/loader"
+	"github.com/uvite/jsvm/metrics"
 )
 
 type CheckModule struct {

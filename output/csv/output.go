@@ -14,8 +14,8 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/output"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/output"
 )
 
 // Output implements the lib.Output interface for saving to CSV files.

@@ -7,9 +7,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/ui/pb"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/ui/pb"
 )
 
 // BaseExecutor is a helper struct that contains common properties and methods

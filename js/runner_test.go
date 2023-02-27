@@ -33,22 +33,22 @@ import (
 	"google.golang.org/grpc/test/grpc_testing"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/errext"
-	"go.k6.io/k6/execution"
-	"go.k6.io/k6/js/modules/k6"
-	k6http "go.k6.io/k6/js/modules/k6/http"
-	k6metrics "go.k6.io/k6/js/modules/k6/metrics"
-	"go.k6.io/k6/js/modules/k6/ws"
-	"go.k6.io/k6/lib"
-	_ "go.k6.io/k6/lib/executor" // TODO: figure out something better
-	"go.k6.io/k6/lib/fsext"
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/lib/testutils/httpmultibin"
-	"go.k6.io/k6/lib/testutils/mockoutput"
-	"go.k6.io/k6/lib/types"
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/metrics/engine"
-	"go.k6.io/k6/output"
+	"github.com/uvite/jsvm/errext"
+	"github.com/uvite/jsvm/execution"
+	"github.com/uvite/jsvm/js/modules/k6"
+	k6http "github.com/uvite/jsvm/js/modules/k6/http"
+	k6metrics "github.com/uvite/jsvm/js/modules/k6/metrics"
+	"github.com/uvite/jsvm/js/modules/k6/ws"
+	"github.com/uvite/jsvm/lib"
+	_ "github.com/uvite/jsvm/lib/executor" // TODO: figure out something better
+	"github.com/uvite/jsvm/lib/fsext"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/lib/testutils/httpmultibin"
+	"github.com/uvite/jsvm/lib/testutils/mockoutput"
+	"github.com/uvite/jsvm/lib/types"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/metrics/engine"
+	"github.com/uvite/jsvm/output"
 )
 
 func TestRunnerNew(t *testing.T) {

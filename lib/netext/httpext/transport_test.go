@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/sirupsen/logrus"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/metrics"
 )
 
 func BenchmarkMeasureAndEmitMetrics(b *testing.B) {

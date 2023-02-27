@@ -9,8 +9,8 @@ import (
 	"net"
 	"reflect"
 
-	"go.k6.io/k6/lib/types"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/lib/types"
+	"github.com/uvite/jsvm/metrics"
 	"gopkg.in/guregu/null.v3"
 )
 

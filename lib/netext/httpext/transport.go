@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"sync"
 
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/netext"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/netext"
+	"github.com/uvite/jsvm/metrics"
 )
 
 // transport is an implementation of http.RoundTripper that will measure and emit
@@ -71,6 +71,7 @@ func newTransport(
 
 // Helper method to finish the tracer trail, assemble the tag values and emits
 // the metric samples for the supplied unfinished request.
+//
 //nolint:nestif,funlen
 func (t *transport) measureAndEmitMetrics(unfReq *unfinishedRequest) *finishedRequest {
 	trail := unfReq.tracer.Done()

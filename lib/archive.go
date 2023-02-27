@@ -18,8 +18,8 @@ import (
 
 	"github.com/spf13/afero"
 
-	"go.k6.io/k6/lib/fsext"
-	"go.k6.io/k6/loader"
+	"github.com/uvite/jsvm/lib/fsext"
+	"github.com/uvite/jsvm/loader"
 )
 
 var (

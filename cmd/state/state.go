@@ -13,7 +13,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/afero"
 
-	"go.k6.io/k6/ui/console"
+	"github.com/uvite/jsvm/ui/console"
 )
 
 const defaultConfigFileName = "config.json"

@@ -15,12 +15,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/execution"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/testutils/minirunner"
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/metrics/engine"
-	"go.k6.io/k6/output"
+	"github.com/uvite/jsvm/execution"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/testutils/minirunner"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/metrics/engine"
+	"github.com/uvite/jsvm/output"
 )
 
 func TestGetStatus(t *testing.T) {

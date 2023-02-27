@@ -14,13 +14,13 @@ import (
 	"github.com/spf13/afero"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
-	"go.k6.io/k6/cmd/state"
-	"go.k6.io/k6/errext"
-	"go.k6.io/k6/errext/exitcodes"
-	"go.k6.io/k6/js"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/loader"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/cmd/state"
+	"github.com/uvite/jsvm/errext"
+	"github.com/uvite/jsvm/errext/exitcodes"
+	"github.com/uvite/jsvm/js"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/loader"
+	"github.com/uvite/jsvm/metrics"
 )
 
 const (

@@ -5,9 +5,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"go.k6.io/k6/cmd/state"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/types"
+	"github.com/uvite/jsvm/cmd/state"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/types"
 )
 
 // TODO: split apart like `k6 run` and `k6 archive`

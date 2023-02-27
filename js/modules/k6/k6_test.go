@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/modulestest"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/modulestest"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/metrics"
 )
 
 func TestFail(t *testing.T) {

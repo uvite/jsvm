@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/metrics"
 )
 
 // TODO: completely get rid of this, see https://github.com/grafana/k6/issues/2430

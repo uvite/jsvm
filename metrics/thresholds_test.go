@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/errext"
-	"go.k6.io/k6/errext/exitcodes"
-	"go.k6.io/k6/lib/types"
+	"github.com/uvite/jsvm/errext"
+	"github.com/uvite/jsvm/errext/exitcodes"
+	"github.com/uvite/jsvm/lib/types"
 	"gopkg.in/guregu/null.v3"
 )
 

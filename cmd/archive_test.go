@@ -14,8 +14,8 @@ import (
 
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/cmd/tests"
-	"go.k6.io/k6/errext/exitcodes"
+	"github.com/uvite/jsvm/cmd/tests"
+	"github.com/uvite/jsvm/errext/exitcodes"
 )
 
 func TestArchiveThresholds(t *testing.T) {

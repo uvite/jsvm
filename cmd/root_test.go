@@ -6,8 +6,8 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
-	"go.k6.io/k6/cmd/tests"
-	"go.k6.io/k6/lib/testutils"
+	"github.com/uvite/jsvm/cmd/tests"
+	"github.com/uvite/jsvm/lib/testutils"
 )
 
 func TestMain(m *testing.M) {

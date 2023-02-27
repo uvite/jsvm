@@ -21,16 +21,16 @@ import (
 	"golang.org/x/net/http2"
 	"golang.org/x/time/rate"
 
-	"go.k6.io/k6/errext"
-	"go.k6.io/k6/errext/exitcodes"
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/eventloop"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/consts"
-	"go.k6.io/k6/lib/netext"
-	"go.k6.io/k6/lib/types"
-	"go.k6.io/k6/loader"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/errext"
+	"github.com/uvite/jsvm/errext/exitcodes"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/eventloop"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/consts"
+	"github.com/uvite/jsvm/lib/netext"
+	"github.com/uvite/jsvm/lib/types"
+	"github.com/uvite/jsvm/loader"
+	"github.com/uvite/jsvm/metrics"
 )
 
 // Ensure Runner implements the lib.Runner interface
@@ -762,6 +762,73 @@ func (u *ActiveVU) RunOnce() error {
 	}
 
 	return err
+}
+
+// RunDefault
+func (u *ActiveVU) RunDefault() (goja.Value, error) {
+	select {
+	case <-u.RunContext.Done():
+		return nil, u.RunContext.Err() // we are done, return
+	case u.busy <- struct{}{}:
+		// nothing else can run now, and the VU cannot be deactivated
+	}
+	defer func() {
+		<-u.busy // unlock deactivation again
+	}()
+
+	// Unmarshall the setupData only the first time for each VU so that VUs are isolated but we
+	// still don't use too much CPU in the middle test
+	if u.setupData == nil {
+		if u.Runner.setupData != nil {
+			var data interface{}
+			if err := json.Unmarshal(u.Runner.setupData, &data); err != nil {
+				return nil, fmt.Errorf("error unmarshaling setup data for the iteration from JSON: %w", err)
+			}
+			u.setupData = u.Runtime.ToValue(data)
+		} else {
+			u.setupData = goja.Undefined()
+		}
+	}
+
+	fn := u.getCallableExport(u.Exec)
+	if fn == nil {
+		// Shouldn't happen; this is validated in cmd.validateScenarioConfig()
+		panic(fmt.Sprintf("function '%s' not found in exports", u.Exec))
+	}
+
+	u.incrIteration()
+	if err := u.Runtime.Set("__ITER", u.iteration); err != nil {
+		panic(fmt.Errorf("error setting __ITER in goja runtime: %w", err))
+	}
+
+	ctx, cancel := context.WithCancel(u.RunContext)
+	defer cancel()
+	u.moduleVUImpl.ctx = ctx
+	// Call the exported function.
+	value, isFullIteration, totalTime, err := u.runFn(ctx, true, fn, cancel, u.setupData)
+	if err != nil {
+		var x *goja.InterruptedError
+		if errors.As(err, &x) {
+			if v, ok := x.Value().(*errext.InterruptError); ok {
+				v.Reason = x.Error()
+				err = v
+			}
+		}
+	}
+
+	// If MinIterationDuration is specified and the iteration wasn't canceled
+	// and was less than it, sleep for the remainder
+	if isFullIteration && u.Runner.Bundle.Options.MinIterationDuration.Valid {
+		durationDiff := u.Runner.Bundle.Options.MinIterationDuration.TimeDuration() - totalTime
+		if durationDiff > 0 {
+			select {
+			case <-time.After(durationDiff):
+			case <-u.RunContext.Done():
+			}
+		}
+	}
+
+	return value, err
 }
 
 func (u *VU) getExported(name string) goja.Value {

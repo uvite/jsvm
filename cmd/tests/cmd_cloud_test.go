@@ -11,8 +11,8 @@ import (
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/cloudapi"
-	"go.k6.io/k6/cmd"
+	"github.com/uvite/jsvm/cloudapi"
+	"github.com/uvite/jsvm/cmd"
 )
 
 func cloudTestStartSimple(t *testing.T, testRunID int) http.Handler {

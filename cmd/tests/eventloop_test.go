@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/cmd"
+	"github.com/uvite/jsvm/cmd"
 )
 
 func TestEventLoop(t *testing.T) {

@@ -6,17 +6,15 @@ import (
 	"sort"
 	"strings"
 
-	"go.k6.io/k6/cmd/state"
-	"go.k6.io/k6/ext"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/output"
-	"go.k6.io/k6/output/cloud"
-	"go.k6.io/k6/output/csv"
-	"go.k6.io/k6/output/influxdb"
-	"go.k6.io/k6/output/json"
-	"go.k6.io/k6/output/statsd"
-
-	"github.com/grafana/xk6-output-prometheus-remote/pkg/remotewrite"
+	"github.com/uvite/jsvm/cmd/state"
+	"github.com/uvite/jsvm/ext"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/output"
+	"github.com/uvite/jsvm/output/cloud"
+	"github.com/uvite/jsvm/output/csv"
+	"github.com/uvite/jsvm/output/influxdb"
+	"github.com/uvite/jsvm/output/json"
+	"github.com/uvite/jsvm/output/statsd"
 )
 
 // TODO: move this to an output sub-module after we get rid of the old collectors?
@@ -36,9 +34,9 @@ func getAllOutputConstructors() (map[string]output.Constructor, error) {
 				"please use the statsd output with env. variable K6_STATSD_ENABLE_TAGS=true instead")
 		},
 		"csv": csv.New,
-		"experimental-prometheus-rw": func(params output.Params) (output.Output, error) {
-			return remotewrite.New(params)
-		},
+		//"experimental-prometheus-rw": func(params output.Params) (output.Output, error) {
+		//	return remotewrite.New(params)
+		//},
 	}
 
 	exts := ext.Get(ext.OutputExtension)

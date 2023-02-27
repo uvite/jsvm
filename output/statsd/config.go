@@ -7,8 +7,8 @@ import (
 	"github.com/mstoykov/envconfig"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/lib/types"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/lib/types"
+	"github.com/uvite/jsvm/metrics"
 )
 
 // config defines the StatsD configuration.

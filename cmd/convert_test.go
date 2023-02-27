@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/cmd/tests"
+	"github.com/uvite/jsvm/cmd/tests"
 )
 
 const testHAR = `

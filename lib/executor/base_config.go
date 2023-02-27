@@ -8,8 +8,8 @@ import (
 
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/lib/consts"
-	"go.k6.io/k6/lib/types"
+	"github.com/uvite/jsvm/lib/consts"
+	"github.com/uvite/jsvm/lib/types"
 )
 
 // DefaultGracefulStopValue is the graceful top value for all executors, unless

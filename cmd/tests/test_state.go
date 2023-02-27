@@ -15,9 +15,9 @@ import (
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/cmd/state"
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/ui/console"
+	"github.com/uvite/jsvm/cmd/state"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/ui/console"
 )
 
 // GlobalTestState is a wrapper around GlobalState for use in tests.

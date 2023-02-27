@@ -4,7 +4,7 @@ import (
 	"io"
 
 	"github.com/sirupsen/logrus"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/metrics"
 )
 
 // TestPreInitState contains all of the state that can be gathered and built

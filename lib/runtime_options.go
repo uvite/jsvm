@@ -36,6 +36,7 @@ type RuntimeOptions struct {
 
 	// Environment variables passed onto the runner
 	Env map[string]string `json:"env"`
+	Genv map[string]any    `json:"genv"`
 
 	NoThresholds  null.Bool   `json:"noThresholds"`
 	NoSummary     null.Bool   `json:"noSummary"`

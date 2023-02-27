@@ -28,14 +28,14 @@ import (
 	"google.golang.org/grpc/test/grpc_testing"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/js/modulestest"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/fsext"
-	"go.k6.io/k6/lib/netext/grpcext"
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/lib/testutils/httpmultibin"
-	grpcanytesting "go.k6.io/k6/lib/testutils/httpmultibin/grpc_any_testing"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/js/modulestest"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/fsext"
+	"github.com/uvite/jsvm/lib/netext/grpcext"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/lib/testutils/httpmultibin"
+	grpcanytesting "github.com/uvite/jsvm/lib/testutils/httpmultibin/grpc_any_testing"
+	"github.com/uvite/jsvm/metrics"
 )
 
 const isWindows = runtime.GOOS == "windows"

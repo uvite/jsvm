@@ -10,7 +10,7 @@ import (
 
 	"github.com/mstoykov/envconfig"
 	"github.com/sirupsen/logrus"
-	"go.k6.io/k6/lib/types"
+	"github.com/uvite/jsvm/lib/types"
 )
 
 // Config is the config for the csv output

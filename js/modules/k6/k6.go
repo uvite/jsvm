@@ -10,9 +10,9 @@ import (
 
 	"github.com/dop251/goja"
 
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/modules"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/modules"
+	"github.com/uvite/jsvm/metrics"
 )
 
 var (

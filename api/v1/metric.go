@@ -7,7 +7,7 @@ import (
 
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/metrics"
 )
 
 type NullMetricType struct {

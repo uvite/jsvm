@@ -16,12 +16,12 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"go.k6.io/k6/cmd/state"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/consts"
-	"go.k6.io/k6/metrics/engine"
-	"go.k6.io/k6/output"
-	"go.k6.io/k6/ui/pb"
+	"github.com/uvite/jsvm/cmd/state"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/consts"
+	"github.com/uvite/jsvm/metrics/engine"
+	"github.com/uvite/jsvm/output"
+	"github.com/uvite/jsvm/ui/pb"
 )
 
 const (

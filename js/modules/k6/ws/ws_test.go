@@ -18,12 +18,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v3"
 
-	httpModule "go.k6.io/k6/js/modules/k6/http"
-	"go.k6.io/k6/js/modulestest"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/lib/testutils/httpmultibin"
-	"go.k6.io/k6/metrics"
+	httpModule "github.com/uvite/jsvm/js/modules/k6/http"
+	"github.com/uvite/jsvm/js/modulestest"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/lib/testutils/httpmultibin"
+	"github.com/uvite/jsvm/metrics"
 )
 
 const statusProtocolSwitch = 101

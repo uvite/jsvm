@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/dop251/goja"
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/eventloop"
-	"go.k6.io/k6/lib"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/eventloop"
+	"github.com/uvite/jsvm/lib"
 )
 
 type moduleVUImpl struct {

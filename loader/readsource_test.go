@@ -11,8 +11,8 @@ import (
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/require"
 
-	"go.k6.io/k6/lib/fsext"
-	"go.k6.io/k6/lib/testutils"
+	"github.com/uvite/jsvm/lib/fsext"
+	"github.com/uvite/jsvm/lib/testutils"
 )
 
 type errorReader string

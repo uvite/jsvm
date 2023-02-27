@@ -21,9 +21,9 @@ import (
 	"github.com/dop251/goja"
 	"github.com/dop251/goja/parser"
 	"github.com/stretchr/testify/assert"
-	"go.k6.io/k6/js/compiler"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/testutils"
+	"github.com/uvite/jsvm/js/compiler"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/testutils"
 	"gopkg.in/yaml.v3"
 )
 

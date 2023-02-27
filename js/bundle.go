@@ -14,12 +14,12 @@ import (
 	"github.com/spf13/afero"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/compiler"
-	"go.k6.io/k6/js/eventloop"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/consts"
-	"go.k6.io/k6/loader"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/compiler"
+	"github.com/uvite/jsvm/js/eventloop"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/consts"
+	"github.com/uvite/jsvm/loader"
 )
 
 // A Bundle is a self-contained bundle of scripts and resources.
@@ -36,6 +36,8 @@ type Bundle struct {
 	preInitState      *lib.TestPreInitState
 
 	exports map[string]goja.Callable
+
+	Vm *goja.Runtime
 }
 
 // A BundleInstance is a self-contained instance of a Bundle.
@@ -213,6 +215,7 @@ func (b *Bundle) Instantiate(ctx context.Context, vuID uint64) (*BundleInstance,
 		ctx:     ctx,
 		runtime: rt,
 	}
+	b.Vm = rt
 	init := newBoundInitContext(b.BaseInitContext, vuImpl)
 	if err := b.instantiate(init, vuID); err != nil {
 		return nil, err
@@ -255,6 +258,9 @@ func (b *Bundle) Instantiate(ctx context.Context, vuID uint64) (*BundleInstance,
 	})
 
 	return bi, instErr
+}
+func (b *Bundle) Set(key string, value any) {
+	b.Vm.Set(key, value)
 }
 
 // Instantiates the bundle into an existing runtime. Not public because it also messes with a bunch

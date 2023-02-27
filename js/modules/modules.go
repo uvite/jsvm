@@ -6,9 +6,9 @@ import (
 	"strings"
 
 	"github.com/dop251/goja"
-	"go.k6.io/k6/ext"
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/lib"
+	"github.com/uvite/jsvm/ext"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/lib"
 )
 
 const extPrefix string = "k6/x/"

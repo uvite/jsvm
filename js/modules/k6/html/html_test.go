@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/modulestest"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/modulestest"
+	"github.com/uvite/jsvm/metrics"
 )
 
 const testHTML = `
@@ -420,10 +420,10 @@ func TestParseHTML(t *testing.T) {
 			_, err := rt.RunString(`
 				const values = doc
 					.find("#select_multi option")
-					.map(function(idx, val) { 
+					.map(function(idx, val) {
 						return val.text()
 					})
-				
+
 				if (values.length !== 3) {
 					throw new Error('Expected 3 values, got ' + values.length)
 				}
@@ -477,25 +477,25 @@ func TestParseHTML(t *testing.T) {
 					})
 					return bucketObj
 				})
-		
+
 			if (buckets.length !== 2) {
 				throw new Error('Expected 2 buckets, got ' + buckets.length)
 			}
-		
+
 			if (buckets[0].name !== 'firstBucket') {
 				throw new Error('Expected bucket name to be "firstBucket", got ' + buckets[0].name)
 			}
-		
+
 			if (buckets[0].creationDate !== 1654852823) {
 				throw new Error(
 					'Expected bucket creation date to be 1654852823, got ' + buckets[0].creationDate
 				)
 			}
-		
+
 			if (buckets[1].name != 'secondBucket') {
 				throw new Error('Expected bucket name to be "secondBucket", got ' + buckets[1].name)
 			}
-		
+
 			if (buckets[1].creationDate !== 1654852825) {
 				throw new Error(
 					'Expected bucket creation date to be 1654852825, got ' + buckets[1].creationDate

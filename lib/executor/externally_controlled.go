@@ -12,10 +12,10 @@ import (
 	"github.com/sirupsen/logrus"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/types"
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/ui/pb"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/types"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/ui/pb"
 )
 
 const externallyControlledType = "externally-controlled"
@@ -478,6 +478,7 @@ func (rs *externallyControlledRunState) handleConfigChange(oldCfg, newCfg Extern
 // Run constantly loops through as many iterations as possible on a variable
 // dynamically controlled number of VUs either for the specified duration, or
 // until the test is manually stopped.
+//
 //nolint:funlen,gocognit
 func (mex *ExternallyControlled) Run(parentCtx context.Context, out chan<- metrics.SampleContainer) (err error) {
 	mex.configLock.RLock()

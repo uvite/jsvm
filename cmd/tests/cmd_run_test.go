@@ -22,12 +22,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/tidwall/gjson"
-	"go.k6.io/k6/cloudapi"
-	"go.k6.io/k6/cmd"
-	"go.k6.io/k6/errext/exitcodes"
-	"go.k6.io/k6/lib/consts"
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/lib/testutils/httpmultibin"
+	"github.com/uvite/jsvm/cloudapi"
+	"github.com/uvite/jsvm/cmd"
+	"github.com/uvite/jsvm/errext/exitcodes"
+	"github.com/uvite/jsvm/lib/consts"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/lib/testutils/httpmultibin"
 )
 
 func TestVersion(t *testing.T) {

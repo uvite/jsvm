@@ -8,7 +8,7 @@ import (
 	logtest "github.com/sirupsen/logrus/hooks/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/js/modulestest"
+	"github.com/uvite/jsvm/js/modulestest"
 )
 
 func wrapInAsyncLambda(input string) string {

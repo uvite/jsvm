@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.k6.io/k6/lib/types"
+	"github.com/uvite/jsvm/lib/types"
 )
 
 func TestGetFixedLengthInt(t *testing.T) {

@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/modules"
-	"go.k6.io/k6/lib/netext/grpcext"
-	"go.k6.io/k6/lib/types"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/modules"
+	"github.com/uvite/jsvm/lib/netext/grpcext"
+	"github.com/uvite/jsvm/lib/types"
+	"github.com/uvite/jsvm/metrics"
 
 	"github.com/dop251/goja"
 	"github.com/jhump/protoreflect/desc"

@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/cmd/tests"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/loader"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/cmd/tests"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/loader"
+	"github.com/uvite/jsvm/metrics"
 )
 
 type runtimeOptionsTestCase struct {

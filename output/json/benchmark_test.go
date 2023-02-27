@@ -7,8 +7,8 @@ import (
 
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/lib/testutils"
-	"go.k6.io/k6/output"
+	"github.com/uvite/jsvm/lib/testutils"
+	"github.com/uvite/jsvm/output"
 )
 
 func BenchmarkFlushMetrics(b *testing.B) {

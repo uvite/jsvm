@@ -3,11 +3,12 @@ package httpext
 import (
 	"crypto/tls"
 
-	"go.k6.io/k6/lib/netext"
+	"github.com/uvite/jsvm/lib/netext"
 )
 
 // ResponseType is used in the request to specify how the response body should be treated
 // The conversion and validation methods are auto-generated with https://github.com/alvaroloes/enumer:
+//
 //nolint:lll
 //go:generate enumer -type=ResponseType -transform=snake -json -text -trimprefix ResponseType -output response_type_gen.go
 type ResponseType uint

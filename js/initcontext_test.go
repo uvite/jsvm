@@ -18,11 +18,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/consts"
-	"go.k6.io/k6/lib/netext"
-	"go.k6.io/k6/lib/types"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/consts"
+	"github.com/uvite/jsvm/lib/netext"
+	"github.com/uvite/jsvm/lib/types"
+	"github.com/uvite/jsvm/metrics"
 )
 
 func TestInitContextRequire(t *testing.T) {
@@ -107,7 +107,7 @@ func TestInitContextRequire(t *testing.T) {
 			require.NoError(t, afero.WriteFile(fs, "/file.js", []byte(`throw new Error("aaaa")`), 0o755))
 			_, err := getSimpleBundle(t, "/script.js", `import "/file.js"; export default function() {}`, fs)
 			assert.EqualError(t, err,
-				"Error: aaaa\n\tat file:///file.js:2:7(3)\n\tat go.k6.io/k6/js.(*InitContext).Require-fm (native)\n\tat file:///script.js:1:0(15)\n")
+				"Error: aaaa\n\tat file:///file.js:2:7(3)\n\tat github.com/uvite/jsvm/js.(*InitContext).Require-fm (native)\n\tat file:///script.js:1:0(15)\n")
 		})
 
 		imports := map[string]struct {

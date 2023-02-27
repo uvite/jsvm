@@ -14,10 +14,10 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"go.k6.io/k6/cmd/state"
-	"go.k6.io/k6/errext"
-	"go.k6.io/k6/lib/consts"
-	"go.k6.io/k6/log"
+	"github.com/uvite/jsvm/cmd/state"
+	"github.com/uvite/jsvm/errext"
+	"github.com/uvite/jsvm/lib/consts"
+	"github.com/uvite/jsvm/log"
 )
 
 const waitRemoteLoggerTimeout = time.Second * 5

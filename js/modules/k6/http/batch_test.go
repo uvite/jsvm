@@ -8,7 +8,7 @@ import (
 	logtest "github.com/sirupsen/logrus/hooks/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/metrics"
 )
 
 const invalidURLerr = `invalid URL: parse "https:// invalidurl.com": invalid character " " in host name`

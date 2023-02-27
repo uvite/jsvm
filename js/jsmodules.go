@@ -1,20 +1,18 @@
 package js
 
 import (
-	"go.k6.io/k6/ext"
-	"go.k6.io/k6/js/modules/k6"
-	"go.k6.io/k6/js/modules/k6/crypto"
-	"go.k6.io/k6/js/modules/k6/crypto/x509"
-	"go.k6.io/k6/js/modules/k6/data"
-	"go.k6.io/k6/js/modules/k6/encoding"
-	"go.k6.io/k6/js/modules/k6/execution"
-	"go.k6.io/k6/js/modules/k6/experimental/browser"
-	"go.k6.io/k6/js/modules/k6/experimental/tracing"
-	"go.k6.io/k6/js/modules/k6/grpc"
-	"go.k6.io/k6/js/modules/k6/html"
-	"go.k6.io/k6/js/modules/k6/http"
-	"go.k6.io/k6/js/modules/k6/metrics"
-	"go.k6.io/k6/js/modules/k6/ws"
+	"github.com/uvite/jsvm/ext"
+	"github.com/uvite/jsvm/js/modules/k6"
+	"github.com/uvite/jsvm/js/modules/k6/crypto"
+	"github.com/uvite/jsvm/js/modules/k6/crypto/x509"
+	"github.com/uvite/jsvm/js/modules/k6/data"
+	"github.com/uvite/jsvm/js/modules/k6/encoding"
+	"github.com/uvite/jsvm/js/modules/k6/execution"
+	"github.com/uvite/jsvm/js/modules/k6/grpc"
+	"github.com/uvite/jsvm/js/modules/k6/html"
+	"github.com/uvite/jsvm/js/modules/k6/http"
+	"github.com/uvite/jsvm/js/modules/k6/metrics"
+	"github.com/uvite/jsvm/js/modules/k6/ws"
 
 	"github.com/grafana/xk6-redis/redis"
 	"github.com/grafana/xk6-timers/timers"
@@ -32,13 +30,13 @@ func getInternalJSModules() map[string]interface{} {
 		"k6/experimental/redis":      redis.New(),
 		"k6/experimental/websockets": &expws.RootModule{},
 		"k6/experimental/timers":     timers.New(),
-		"k6/experimental/tracing":    tracing.New(),
-		"k6/experimental/browser":    browser.New(),
-		"k6/net/grpc":                grpc.New(),
-		"k6/html":                    html.New(),
-		"k6/http":                    http.New(),
-		"k6/metrics":                 metrics.New(),
-		"k6/ws":                      ws.New(),
+		//"k6/experimental/tracing":    tracing.New(),
+		//"k6/experimental/browser":    browser.New(),
+		"k6/net/grpc": grpc.New(),
+		"k6/html":     html.New(),
+		"k6/http":     http.New(),
+		"k6/metrics":  metrics.New(),
+		"k6/ws":       ws.New(),
 	}
 }
 

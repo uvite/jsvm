@@ -18,11 +18,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.k6.io/k6/cmd/tests"
-	"go.k6.io/k6/errext"
-	"go.k6.io/k6/errext/exitcodes"
-	"go.k6.io/k6/lib/fsext"
-	"go.k6.io/k6/lib/testutils"
+	"github.com/uvite/jsvm/cmd/tests"
+	"github.com/uvite/jsvm/errext"
+	"github.com/uvite/jsvm/errext/exitcodes"
+	"github.com/uvite/jsvm/lib/fsext"
+	"github.com/uvite/jsvm/lib/testutils"
 )
 
 type mockWriter struct {

@@ -11,9 +11,9 @@ import (
 	"github.com/dop251/goja"
 	"github.com/tidwall/gjson"
 
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/modules/k6/html"
-	"go.k6.io/k6/lib/netext/httpext"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/modules/k6/html"
+	"github.com/uvite/jsvm/lib/netext/httpext"
 )
 
 // Response is a representation of an HTTP response to be returned to the goja VM

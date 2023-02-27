@@ -12,10 +12,10 @@ import (
 	"github.com/sirupsen/logrus"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/types"
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/ui/pb"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/types"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/ui/pb"
 )
 
 const constantArrivalRateType = "constant-arrival-rate"
@@ -190,6 +190,7 @@ func (car *ConstantArrivalRate) Init(ctx context.Context) error {
 // time should iteration X begin) different, but keep everything else the same.
 // This will allow us to implement https://github.com/k6io/k6/issues/1386
 // and things like all of the TODOs below in one place only.
+//
 //nolint:funlen,cyclop
 func (car ConstantArrivalRate) Run(parentCtx context.Context, out chan<- metrics.SampleContainer) (err error) {
 	gracefulStop := car.config.GetGracefulStop()

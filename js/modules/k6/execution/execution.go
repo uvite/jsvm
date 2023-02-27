@@ -8,11 +8,11 @@ import (
 
 	"github.com/dop251/goja"
 
-	"go.k6.io/k6/errext"
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/modules"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/errext"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/modules"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/metrics"
 )
 
 type (

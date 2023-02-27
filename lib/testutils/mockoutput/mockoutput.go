@@ -1,7 +1,7 @@
 package mockoutput
 
 import (
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/metrics"
 )
 
 // New exists so that the usage from tests avoids repetition, i.e. is

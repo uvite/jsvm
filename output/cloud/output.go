@@ -13,16 +13,16 @@ import (
 	"github.com/sirupsen/logrus"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/cloudapi"
-	"go.k6.io/k6/errext"
-	"go.k6.io/k6/errext/exitcodes"
-	"go.k6.io/k6/output"
+	"github.com/uvite/jsvm/cloudapi"
+	"github.com/uvite/jsvm/errext"
+	"github.com/uvite/jsvm/errext/exitcodes"
+	"github.com/uvite/jsvm/output"
 
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/consts"
-	"go.k6.io/k6/lib/netext"
-	"go.k6.io/k6/lib/netext/httpext"
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/consts"
+	"github.com/uvite/jsvm/lib/netext"
+	"github.com/uvite/jsvm/lib/netext/httpext"
+	"github.com/uvite/jsvm/metrics"
 )
 
 // TestName is the default Load Impact Cloud test name

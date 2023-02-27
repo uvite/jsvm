@@ -12,8 +12,8 @@ import (
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.k6.io/k6/cmd"
-	"go.k6.io/k6/lib/testutils/httpmultibin"
+	"github.com/uvite/jsvm/cmd"
+	"github.com/uvite/jsvm/lib/testutils/httpmultibin"
 )
 
 func TestTracingModuleClient(t *testing.T) {
@@ -257,7 +257,7 @@ func TestTracingInstrummentHTTP_SupportsMultipleTestScripts(t *testing.T) {
 		import tracing from "k6/experimental/tracing";
 
 		import { iShouldBeInstrumented } from "./imported.js";
-		
+
 		tracing.instrumentHTTP({
 			propagator: "w3c",
 		})

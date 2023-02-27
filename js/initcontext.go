@@ -13,12 +13,12 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/afero"
 
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/compiler"
-	"go.k6.io/k6/js/modules"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/lib/fsext"
-	"go.k6.io/k6/loader"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/compiler"
+	"github.com/uvite/jsvm/js/modules"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/lib/fsext"
+	"github.com/uvite/jsvm/loader"
 )
 
 type programWithSource struct {

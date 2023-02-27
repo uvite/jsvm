@@ -2,10 +2,11 @@ package lib
 
 import (
 	"context"
+	"github.com/dop251/goja"
 	"io"
 	"time"
 
-	"go.k6.io/k6/metrics"
+	"github.com/uvite/jsvm/metrics"
 )
 
 // ActiveVU represents an actively running virtual user.
@@ -14,6 +15,7 @@ type ActiveVU interface {
 	// way to interrupt the execution is to cancel the context given
 	// to InitializedVU.Activate()
 	RunOnce() error
+	RunDefault() (goja.Value, error)
 }
 
 // InitializedVU represents a virtual user ready for work. It needs to be

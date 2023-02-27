@@ -3,10 +3,10 @@ package v1
 import (
 	"context"
 
-	"go.k6.io/k6/execution"
-	"go.k6.io/k6/lib"
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/metrics/engine"
+	"github.com/uvite/jsvm/execution"
+	"github.com/uvite/jsvm/lib"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/metrics/engine"
 )
 
 // ControlSurface includes the methods the REST API can use to control and

@@ -13,12 +13,13 @@ import (
 	"github.com/andybalholm/brotli"
 	"github.com/klauspost/compress/zstd"
 
-	"go.k6.io/k6/lib"
+	"github.com/uvite/jsvm/lib"
 )
 
 // CompressionType is used to specify what compression is to be used to compress the body of a
 // request
 // The conversion and validation methods are auto-generated with https://github.com/alvaroloes/enumer:
+//
 //go:generate enumer -type=CompressionType -transform=snake -trimprefix CompressionType -output compression_type_gen.go
 type CompressionType uint
 

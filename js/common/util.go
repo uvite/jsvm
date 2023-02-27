@@ -9,7 +9,7 @@ import (
 
 	"github.com/dop251/goja"
 	"github.com/sirupsen/logrus"
-	"go.k6.io/k6/errext"
+	"github.com/uvite/jsvm/errext"
 )
 
 // Throw a JS error; avoids re-wrapping GoErrors.

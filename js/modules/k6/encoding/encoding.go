@@ -3,8 +3,8 @@ package encoding
 import (
 	"encoding/base64"
 
-	"go.k6.io/k6/js/common"
-	"go.k6.io/k6/js/modules"
+	"github.com/uvite/jsvm/js/common"
+	"github.com/uvite/jsvm/js/modules"
 )
 
 type (

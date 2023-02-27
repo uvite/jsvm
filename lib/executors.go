@@ -11,11 +11,12 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"go.k6.io/k6/metrics"
-	"go.k6.io/k6/ui/pb"
+	"github.com/uvite/jsvm/metrics"
+	"github.com/uvite/jsvm/ui/pb"
 )
 
 // TODO: remove globals and use some type of explicit dependency injection?
+//
 //nolint:gochecknoglobals
 var (
 	executorConfigTypesMutex   sync.RWMutex

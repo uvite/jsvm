@@ -8,12 +8,13 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/guregu/null.v3"
 
-	"go.k6.io/k6/cmd/state"
-	"go.k6.io/k6/converter/har"
-	"go.k6.io/k6/lib"
+	"github.com/uvite/jsvm/cmd/state"
+	"github.com/uvite/jsvm/converter/har"
+	"github.com/uvite/jsvm/lib"
 )
 
 // TODO: split apart like `k6 run` and `k6 archive`?
+//
 //nolint:funlen,gocognit
 func getCmdConvert(gs *state.GlobalState) *cobra.Command {
 	var (
