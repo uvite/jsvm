@@ -157,6 +157,10 @@ func (s *Slice) Length() int {
 	return len(*s)
 }
 
+func (s *Slice) Len() int {
+	return len(*s)
+}
+
 func (s Slice) Addr() *Slice {
 	return &s
 }
